@@ -481,7 +481,7 @@ function Save-PackageLocally {
         } else {
             if (Test-Path Env:\DEFAULT_PS_REPOSITORY_URL) {
                 $PSRepositoryUrl = $Env:DEFAULT_PS_REPOSITORY_URL
-                $AccessTokenSecureString = $AccessToken | ConvertTo-SecureString -AsPlainText -Force
+                $AccessTokenSecureString = $env:SYSTEM_ACCESS_TOKEN | ConvertTo-SecureString -AsPlainText -Force
                 $credentialsObject = [pscredential]::new("ONEBRANCH_TOKEN", $AccessTokenSecureString)
             }
             else {
