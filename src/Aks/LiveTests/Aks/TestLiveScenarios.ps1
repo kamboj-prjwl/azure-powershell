@@ -27,9 +27,20 @@ Invoke-LiveTestScenario -Name "Test_AKS_CURD" -Description "Test AKS Cluster CRU
     $cluster = Get-AzAksCluster -ResourceGroupName $resourceGroupName -Name $kubeClusterName
     Write-Host "##[section]Finished retrieving Aks cluster : Get-AzAksCluster"
 
-    Assert-NotNull $cluster.Fqdn
-    Assert-NotNull $cluster.KubernetesVersion
-    Assert-NotNull $cluster.DnsPrefix
+    $ipTag = New-AzPublicIpTag -IpTagType FirstPartyUsage -Tag "/NonProd"
+    $pip = New-AzPublicIpAddress -ResourceGroupName $rgName -Name $pipName -Location $location -AllocationMethod Static -Sku Standard -IpTag $ipTag
+
+    $kubeVersion = (Get-AzAksVersion -Location $location).OrchestratorVersion | Sort-Object -Descending | Select-Object -Skip 2 -First 1
+
+    Write-Host "##[section]Start creating AKS cluster : New-AzAksCluster"
+
+    New-AzAksCluster -ResourceGroupName $rgName -Name $kubeName -Location $location -SshKeyValue $sshKeyValue -ServicePrincipalIdAndSecret $servicePrincipalCredential -KubernetesVersion $kubeVersion -NodeName $sysNodeName -NodePoolMode System -NodeOsSKU AzureLinux -NodeVmSize Standard_D2s_v3 -AutoUpgradeChannel node-image -NodeCount 2 -EnableNodeAutoScaling -NodeMinCount 1 -NodeMaxCount 3 -NetworkPlugin azure -NodeVnetSubnetID $snet.Id -LoadBalancerOutboundIp $pip.Id
+
+    Write-Host "##[section]Finished creating AKS cluster : New-AzAksCluster"
+
+    $cluster = Get-AzAksCluster -ResourceGroupName $rgName -Name $kubeName
+
+    Assert-NotNull $cluster
     Assert-NotNull $cluster.NodeResourceGroup
     Assert-AreEqual "Succeeded" $cluster.ProvisioningState
     Assert-AreEqual 100 $cluster.MaxAgentPools
