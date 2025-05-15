@@ -92,9 +92,7 @@ Invoke-LiveTestScenario -Name "Test_AKS_CURD" -Description "Test AKS Cluster CRU
     $pool1Name = "default"
     $pool2Name = "pool2"
 
-    Write-Host "##[section]Start to create Aks node pool : New-AzAksNodePool"
-    New-AzAksNodePool -ResourceGroupName $resourceGroupName -ClusterName $kubeClusterName -Name $pool2Name -OsType "Windows" -OsSKU "Windows2022" -Count 1 -VmSetType VirtualMachineScaleSets
-    Write-Host "##[section]Finished creating Aks node pool : New-AzAksNodePool"
+    New-AzAksNodePool -ResourceGroupName $rgName -ClusterName $kubeName -Name $usrNodeName -Mode User -OsType Windows -OsSKU Windows2022 -VmSize Standard_D2s_v3 -VmSetType VirtualMachineScaleSets -Count 2
 
     Write-Host "##[section]Start to retrieve Aks node pool : Get-AzAksNodePool"
     $pools = Get-AzAksNodePool -ResourceGroupName $resourceGroupName -ClusterName $kubeClusterName
