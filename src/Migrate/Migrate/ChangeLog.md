@@ -18,6 +18,8 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
+
+## Version 2.10.0
 * Fixed bugs in `New-AzMigrateLocalDiskMappingObject`
   - Only validate for non-512 physical sector size of VHD when `-PhysicalSectorSize` parameter is given
 * Fixed bugs in `New-AzMigrateLocalServerReplication`
