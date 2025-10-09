@@ -18,6 +18,8 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
+
+## Version 6.4.0
 * Added Managed HSM network rule cmdlets mirroring existing Key Vault network rule management:
     - New-AzKeyVaultManagedHsmNetworkRuleSetObject
     - Add-AzKeyVaultManagedHsmNetworkRule
