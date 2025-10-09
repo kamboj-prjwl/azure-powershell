@@ -18,6 +18,8 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
+
+## Version 3.8.0
 * Added parameters `-EnableAutoOsUpgrade` and `-AllowRdpAccess` to `New-AzServiceFabricManagedCluster` and `Set-AzServiceFabricManagedCluster`.
 * Added parameters `-ZoneBalance`, `-AllowOverProvisioning`, and `-Zone` to `New-AzServiceFabricManagedNodeType` and `Set-AzServiceFabricManagedNodeType`.
 * Added preannoucement for removing Reimage parameters from `Set-AzServiceFabricManagedNodeType`.

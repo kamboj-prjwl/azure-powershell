@@ -1,3 +1,159 @@
+## 14.5.0 - November 2025
+#### Az.Automation 1.11.2
+* Fixed runbook_type: 'PowerShell72' [#24779][#23967]
+
+#### Az.CloudService 2.1.1
+* Preannounced breaking changes. Please refer to https://go.microsoft.com/fwlink/?linkid=2333229
+
+#### Az.Compute 10.4.0
+* Added '-Redeploy' switch parameter for 'Update-AzHost' cmdlet to enable dedicated host redeployment.
+* Added '-InstantAccessDurationMinutes' parameter to New-AzSnapshotConfig.
+* Added 'SecureVMGuestStateSAS' parameter to 'Grant-AzSnapshotAccess'.
+
+#### Az.Databricks 1.10.1
+* Preannounced breaking changes. Please refer to https://go.microsoft.com/fwlink/?linkid=2333229
+
+#### Az.DataFactory 1.19.5
+* Added support for Salesforce V2 partitionOption feature.
+* Added support MI In Lakehouse And Warehouse connection.
+
+#### Az.DataMigration 1.0.0
+* General availability for module Az.DataMigration
+* Upgraded Data Migration API to stable version '2025-06-30'.
+* Added support for retrying database migrations and for deleting SQL VM and SQL MI Database Migration Services.
+* Added cmdlets:
+  - 'Invoke-AzDataMigrationRetryToSqlDb'
+  - 'Remove-AzDataMigrationToSqlManagedInstance'
+  - 'Remove-AzDataMigrationToSqlVM'
+
+#### Az.FirmwareAnalysis 1.0.0
+* General availability for module Az.FirmwareAnalysis
+* Upgraded API support to include 2025-08-02
+* Added usage metric support via the Get-AzFirmwareAnalysisUsageMetric cmdlet
+
+#### Az.HDInsight 6.4.0
+* Added two parameters '-EntraUserIdentity' and '-EntraUserFullInfo' to cmdlet 'New-AzHDInsightCluster' to support create cluster with entra user as gateway credential to replace use username and password.
+  - Added parameter '-EntraUserIdentity' to cmdlet 'New-AzHDInsightCluster' to support creating Entra user clusters using one or more ObjectId or Upn.
+  - Added parameter '-EntraUserFullInfo' to cmdlet 'New-AzHDInsightCluster' to support creating Entra user clusters using an array of hashtables that include ObjectId, Upn, and DisplayName.
+* Added two parameters '-EntraUserIdentity' and '-EntraUserFullInfo' to cmdlet 'Set-AzHDInsightGatewayCredential' to update Entra user information for an existing Entra user cluster.
+  - Added parameter '-EntraUserIdentity' to cmdlet 'Set-AzHDInsightGatewayCredential' to support update Entra user clusters using one or more ObjectId or Upn.
+  - Added parameter '-EntraUserFullInfo' to cmdlet 'Set-AzHDInsightGatewayCredential' to support update Entra user clusters using an array of hashtables that include ObjectId, Upn, and DisplayName.
+* Added support for using WASB storage with Managed Identity (MSI) in the 'New-AzHDInsightCluster' cmdlet.
+  -Users can specify the 'StorageAccountManagedIdentity' parameter to use MSI as a wasb storage credential when creating a cluster, as an alternative to using 'StorageAccountKey'.
+
+#### Az.Migrate 2.10.0
+* Fixed bugs in 'New-AzMigrateLocalDiskMappingObject'
+  - Only validate for non-512 physical sector size of VHD when '-PhysicalSectorSize' parameter is given
+* Fixed bugs in 'New-AzMigrateLocalServerReplication'
+  - Only validate for non-512 physical sector size of VHD when '-PhysicalSectorSize' parameter is given
+  - Removed reserved words validation for source disk names as it is no longer required
+  - Added ARM id validation for input parameters
+* Fixed bugs in 'Set-AzMigrateLocalServerReplication'
+  - Added ARM id validation for input parameters
+* Fixed bugs in 'Get-AzMigrateLocalServerReplication'
+  - Added ARM id validation for input parameters
+* Enhanced Get-AzMigrateServerMigrationStatus to add support for the -Expedite parameter.
+
+#### Az.Network 7.21.0
+- Added deprecation warning for cmdlet 'Invoke-AzFirewallPacketCapture'
+* Added new cmdlet for Invoke PacketCaptureOperation on Azure Firewall
+    - 'Invoke-AzFirewallPacketCaptureOperation'
+* Updated cmdlet to add the mandatory property of 'Operation' and made all other properties not mandatory for Azure Firewall Packet Capture Parameters. Updated corresponding cmdlets.
+    - 'New-AzFirewallPacketCaptureParameter'
+* Added new cmdlet for List NetworkSecurityPerimeter ServiceTags
+    - 'Get-AzNetworkSecurityPerimeterServiceTag'
+* Added properties 'DedicatedBackendConnection', 'ValidateCertChainAndExpiry', 'ValidateSNI', and 'SniName' to Application Gateway Backend HTTP Settings, as well as support for them in the following cmdlets:
+    - 'New-AzApplicationGatewayBackendHttpSetting'
+    - 'Add-AzApplicationGatewayBackendHttpSetting'
+    - 'Set-AzApplicationGatewayBackendHttpSetting'
+* Added cmdlet 'Get-AzAllVirtualNetworkGatewayRadiusServerSecret' to fetch list of VirtualNetworkGateway VpnClientConfiguration Radius servers and corresponding radius secrets.
+* Added cmdlet 'Get-AzAllVpnServerConfigurationRadiusServerSecret ' to fetch list of VirtualWan VpnServerConfiguration Radius servers and corresponding radius secrets.
+
+#### Az.RecoveryServices 7.8.1
+* Added Cross region restore support for new region - eastus3.
+
+#### Az.Resources 8.1.1
+* Fixed issue where RoleAssignment cmdlets did not properly handle insufficient MSGraph permissions [#28583]
+
+#### Az.ScVmm 0.1.1
+* Suppressed expected MachineResourceNotFound exceptions from being printed on the console.
+
+#### Az.SecurityInsights 3.2.1
+* Preannounced breaking changes. Please refer to https://go.microsoft.com/fwlink/?linkid=2333229
+
+#### Az.ServiceFabric 3.8.0
+* Added parameters '-EnableAutoOsUpgrade' and '-AllowRdpAccess' to 'New-AzServiceFabricManagedCluster' and 'Set-AzServiceFabricManagedCluster'.
+* Added parameters '-ZoneBalance', '-AllowOverProvisioning', and '-Zone' to 'New-AzServiceFabricManagedNodeType' and 'Set-AzServiceFabricManagedNodeType'.
+* Added preannoucement for removing Reimage parameters from 'Set-AzServiceFabricManagedNodeType'.
+* Added new cmdlets for managed node types:
+    - 'Invoke-AzServiceFabricDeallocateManagedNodeType'
+    - 'Invoke-AzServiceFabricRedeployManagedNodeType'
+    - 'Invoke-AzServiceFabricReimageManagedNodeType'
+    - 'Start-AzServiceFabricManagedNodeType'
+* Marked 'NodeName' as non-required and added parameter '-UpdateType' in 'Restart-AzServiceFabricManagedNodeType' to allow UD by UD restarts of all nodes in node type.
+* Renamed Remove-AzServiceFabricManagedNodeType parameter sets to use 'Remove' instead of 'Delete' for consistency with cmdlet name.
+
+#### Az.Sftp 0.1.0
+* First preview release for module Az.Sftp
+
+#### Az.SignalR 2.2.0
+* Added cmdlets for managing custom domains:
+    - New-AzSignalRCustomDomain: create or update a custom domain for SignalR
+    - Get-AzSignalRCustomDomain: get custom domain(s) for SignalR
+    - Remove-AzSignalRCustomDomain: remove a custom domain from SignalR
+    - Update-AzSignalRCustomDomain: update a custom domain of SignalR
+* Added cmdlets for managing custom certificates:
+    - New-AzSignalRCustomCertificate: create or update a custom certificate for SignalR
+    - Get-AzSignalRCustomCertificate: get custom certificate(s) for SignalR
+    - Remove-AzSignalRCustomCertificate: remove a custom certificate from SignalR
+    - Update-AzSignalRCustomCertificate: update a custom certificate of SignalR
+* Added support for managed identity to SignalR resource create and update cmdlets:
+    - New-AzSignalR: now supports -EnableSystemAssignedIdentity and -UserAssignedIdentity parameters
+    - Update-AzSignalR: now supports -EnableSystemAssignedIdentity and -UserAssignedIdentity parameters
+
+#### Az.Sql 6.2.0
+* Improved parameter validation for the EnableSoftDelete and SoftDeleteRetentionDays parameters.
+* Updated 'New-AzSqlServer' to support soft-delete retention
+    - Added 'EnableSoftDelete' parameter to 'New-AzSqlServer' to enable creation of a server with soft-delete retention
+    - Added 'SoftDeleteRetentionDays' parameter to 'New-AzSqlServer' to set the soft-delete retention period (in days)
+* Updated 'Set-AzSqlServer' to support soft-delete retention
+    - Added 'EnableSoftDelete' parameter to 'Set-AzSqlServer' to enable or disable soft-delete retention on an existing server
+    - Added 'SoftDeleteRetentionDays' parameter to 'Set-AzSqlServer' to update the soft-delete retention period (in days) on an existing server
+* Added 'Restore-AzSqlServer' cmdlet to restore a deleted Azure SQL server within the retention period
+
+#### Az.StackHCI 2.6.3
+* Modified the Cluster Registration to use Managed Service Identity instead of AAD App based registration for new OS versions.
+
+#### Az.Storage 9.2.0
+* Supported Zone and ZonePlacementPolicy on Storage accounts 
+    - 'New-AzStorageAccount'
+    - 'Set-AzStorageAccount'
+* Supported listing Storage SKU
+    - 'Get-AzStorageSku'
+* Supported enabling SMB Oauth on Storage accounts 
+    - 'New-AzStorageAccount'
+    - 'Set-AzStorageAccount'
+* Supported Enable Metrics when set object replication policy 
+    - 'Set-AzStorageObjectReplicationPolicy'
+* Supported create and get symbolic link in NFS File Share
+    - 'New-AzStorageFileSymbolicLink'
+    - 'Get-AzStorageFileSymbolicLink'
+
+#### Az.StorageCache 0.3.0
+* Added support for Import, AutoExport and AutoImport HSM Jobs
+
+#### Az.StorageDiscovery 1.0.0
+* General availability for module Az.StorageDiscovery
+
+#### Az.StorageMover 1.6.0
+* Added  support for new api version 2025-07-01
+* Included new endpoint types supported in the api version
+    * MultiCloudConnector
+    * NFSFileShare
+* Enhanced help documentation for New-AzStorageMoverAzStorageContainerEndpoint and New-AzStorageMoverMultiCloudConnectorEndpoint with identity details.
+* Corrected online version link for Update-AzStorageMoverAzNfsFileShareEndpoint help documentation.
+* Added identity information to the output properties in help documentation for storage container and multi-cloud connector endpoints.
+
 ## 14.4.0 - September 2025
 #### Az.Accounts 5.3.0
 * Updated 'AuthenticationAssemblyLoadContext' project to deprecate .NET 6.0 and build on .NET 8.0.
