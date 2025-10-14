@@ -1,3 +1,7 @@
+## 14.6.0 - November 2025
+#### Az.Compute 10.5.0
+* Added '-Redeploy' switch parameter for 'Update-AzHost' cmdlet to enable dedicated host redeployment.
+
 ## 14.5.0 - October 2025
 #### Az.Automation 1.11.2
 * Fixed runbook_type: 'PowerShell72' [#24779][#23967]
