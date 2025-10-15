@@ -1,3 +1,8 @@
+## 14.6.0 - November 2025
+#### Az.Compute 10.5.0 
+* Modified cmdlet `Update-AzHost`
+   - Added parameter `-Redeploy`
+
 ## 14.5.0 - October 2025
 #### Az.Compute 10.4.0 
 * Modified cmdlet `Grant-AzSnapshotAccess`
@@ -734,6 +739,7 @@
 #### Az.Storage 9.0.0 
 * Modified cmdlet `Start-AzStorageAccountMigration`
    - Added parameter `-Force`
+
 
 
 
