@@ -7435,6 +7435,12 @@
       "Update-AzWebPubSub": {},
       "Test-AzSignalR": {}
     },
+    "Az.Site": {
+      "Get-AzSite": {},
+      "New-AzSite": {},
+      "Remove-AzSite": {},
+      "Update-AzSite": {}
+    },
     "Az.Sphere": {
       "Get-AzSphereCatalog": {},
       "Get-AzSphereCatalogDevice": {},
