@@ -1,3 +1,28 @@
+## 14.6.0 - November 2025
+#### Az.Compute 10.5.0
+* Added '-Redeploy' switch parameter for 'Update-AzHost' cmdlet to enable dedicated host redeployment.
+
+#### Az.Network 7.22.0
+* Added new RouteTableUsageMode property for Network Manager Routing Configuration
+  - Updated 'New-AzNetworkManagerRoutingConfiguration' cmdlet
+  - Updated 'Set-AzNetworkManagerRoutingConfiguration' cmdlet
+* Added certificate-based authentication support for VPN Gateway connections
+    - New cmdlet 'New-AzVirtualNetworkGatewayCertificateAuthentication' to create certificate authentication configuration
+    - Added '-AuthenticationType' and '-CertificateAuthentication' parameters to 'New-AzVirtualNetworkGatewayConnection' and 'Set-AzVirtualNetworkGatewayConnection'
+    - Added '-UserAssignedIdentityId' parameter to 'Set-AzVirtualNetworkGateway' and 'New-AzVirtualNetworkGateway' for managed identity configuration
+* Upgraded the api version from 2024-10-01 to 2025-01-01
+* Added property 'EnableL4ClientIpPreservation' to Application Gateway Backend Settings, as well as support for them in the following cmdlets:
+    - 'New-AzApplicationGatewayBackendSetting'
+    - 'Add-AzApplicationGatewayBackendSetting'
+    - 'Set-AzApplicationGatewayBackendSetting'
+* Added property 'EnableProbeProxyProtocolHeader' to Application Gateway Probes, as well as support for them in the following cmdlets:
+    - 'Set-AzApplicationGatewayProbeConfig'
+	- 'Add-AzApplicationGatewayProbeConfig'
+	- 'New-AzApplicationGatewayProbeConfig'
+
+#### Az.StackHCI 2.6.4
+* Fixed bug: Buse boolean in comparision
+
 ## 14.5.0 - October 2025
 #### Az.Automation 1.11.2
 * Fixed runbook_type: 'PowerShell72' [#24779][#23967]

@@ -1290,6 +1290,8 @@ Preview modules are not included in this list. Read more about [module version t
   - Change description : PlanName and MemberName will be removed from the InputObject parameter. 
   - This change will take effect on '11/18/2025'- The change is expected to take effect from Az version : '15.0.0'
   - The change is expected to take effect from version : '3.0.0'
+
+- Cmdlet breaking-change will happen to parameter set `GetAzDevCenterAdminImageVersion_List`
   The cmdlet parameter set is being deprecated. There will be no replacement for it.
   - Change description : The default parameter set will change from list dev center image versions to list project image versions. 
   - This change will take effect on '11/18/2025'- The change is expected to take effect from Az version : '15.0.0'
