@@ -12,7 +12,7 @@
 # RootModule = ''
 
 # Version number of this module.
-ModuleVersion = '14.5.0'
+ModuleVersion = '14.6.0'
 
 # Supported PSEditions
 CompatiblePSEditions = 'Core', 'Desktop'
@@ -86,7 +86,7 @@ RequiredModules = @(@{ModuleName = 'Az.Accounts'; ModuleVersion = '5.3.0'; },
             @{ModuleName = 'Az.CloudService'; RequiredVersion = '2.1.1'; }, 
             @{ModuleName = 'Az.CognitiveServices'; RequiredVersion = '1.16.0'; }, 
             @{ModuleName = 'Az.Communication'; RequiredVersion = '0.6.0'; }, 
-            @{ModuleName = 'Az.Compute'; RequiredVersion = '10.4.0'; }, 
+            @{ModuleName = 'Az.Compute'; RequiredVersion = '10.5.0'; }, 
             @{ModuleName = 'Az.ComputeFleet'; RequiredVersion = '0.1.1'; }, 
             @{ModuleName = 'Az.ComputeSchedule'; RequiredVersion = '0.1.1'; }, 
             @{ModuleName = 'Az.ConfidentialLedger'; RequiredVersion = '1.1.1'; }, 
@@ -181,7 +181,7 @@ RequiredModules = @(@{ModuleName = 'Az.Accounts'; ModuleVersion = '5.3.0'; },
             @{ModuleName = 'Az.MySql'; RequiredVersion = '1.5.0'; }, 
             @{ModuleName = 'Az.NeonPostgres'; RequiredVersion = '0.2.0'; }, 
             @{ModuleName = 'Az.NetAppFiles'; RequiredVersion = '0.25.0'; }, 
-            @{ModuleName = 'Az.Network'; RequiredVersion = '7.21.0'; }, 
+            @{ModuleName = 'Az.Network'; RequiredVersion = '7.22.0'; }, 
             @{ModuleName = 'Az.NetworkAnalytics'; RequiredVersion = '0.1.2'; }, 
             @{ModuleName = 'Az.NetworkCloud'; RequiredVersion = '1.2.1'; }, 
             @{ModuleName = 'Az.NetworkFunction'; RequiredVersion = '0.2.0'; }, 
@@ -222,6 +222,7 @@ RequiredModules = @(@{ModuleName = 'Az.Accounts'; ModuleVersion = '5.3.0'; },
             @{ModuleName = 'Az.ServiceLinker'; RequiredVersion = '0.3.0'; }, 
             @{ModuleName = 'Az.Sftp'; RequiredVersion = '0.1.0'; }, 
             @{ModuleName = 'Az.SignalR'; RequiredVersion = '2.2.0'; }, 
+            @{ModuleName = 'Az.Site'; RequiredVersion = '0.1.0'; }, 
             @{ModuleName = 'Az.Sphere'; RequiredVersion = '0.1.3'; }, 
             @{ModuleName = 'Az.SpringCloud'; RequiredVersion = '0.4.0'; }, 
             @{ModuleName = 'Az.Sql'; RequiredVersion = '6.2.0'; }, 
