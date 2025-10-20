@@ -1,3 +1,42 @@
+## 14.6.0 - November 2025
+#### Az.Compute 10.5.0 
+* Modified cmdlet `New-AzVM`
+   - Added parameter `-AddProxyAgentExtension`
+* Modified cmdlet `New-AzVmss`
+   - Added parameter `-AddProxyAgentExtension`
+* Modified cmdlet `Set-AzVMProxyAgentSetting`
+   - Added parameter `-AddProxyAgentExtension`
+* Modified cmdlet `Set-AzVmssProxyAgentSetting`
+   - Added parameter `-AddProxyAgentExtension`
+* Modified cmdlet `Update-AzHost`
+   - Added parameter `-Redeploy`
+#### Az.Network 7.22.0 
+* Modified cmdlet `Add-AzApplicationGatewayBackendSetting`
+   - Added parameter `-EnableL4ClientIpPreservation`
+* Modified cmdlet `Add-AzApplicationGatewayProbeConfig`
+   - Added parameter `-EnableProbeProxyProtocolHeader`
+* Modified cmdlet `New-AzApplicationGatewayBackendSetting`
+   - Added parameter `-EnableL4ClientIpPreservation`
+* Modified cmdlet `New-AzApplicationGatewayProbeConfig`
+   - Added parameter `-EnableProbeProxyProtocolHeader`
+* Modified cmdlet `New-AzNetworkManagerRoutingConfiguration`
+   - Added parameter `-RouteTableUsageMode`
+* Modified cmdlet `New-AzVirtualNetworkGateway`
+   - Added parameters `-UserAssignedIdentityId`, `-Identity`
+* Modified cmdlet `New-AzVirtualNetworkGatewayConnection`
+   - Added parameters `-AuthenticationType`, `-CertificateAuthentication`
+* Modified cmdlet `Set-AzApplicationGatewayBackendSetting`
+   - Added parameter `-EnableL4ClientIpPreservation`
+* Modified cmdlet `Set-AzApplicationGatewayProbeConfig`
+   - Added parameter `-EnableProbeProxyProtocolHeader`
+* Modified cmdlet `Set-AzNetworkManagerRoutingConfiguration`
+   - Added parameter `-RouteTableUsageMode`
+* Modified cmdlet `Set-AzVirtualNetworkGateway`
+   - Added parameters `-UserAssignedIdentityId`, `-Identity`
+* Modified cmdlet `Set-AzVirtualNetworkGatewayConnection`
+   - Added parameters `-AuthenticationType`, `-CertificateAuthentication`
+* Added cmdlet `New-AzVirtualNetworkGatewayCertificateAuthentication`
+
 ## 14.5.0 - October 2025
 #### Az.Compute 10.4.0 
 * Modified cmdlet `Grant-AzSnapshotAccess`
@@ -734,6 +773,7 @@
 #### Az.Storage 9.0.0 
 * Modified cmdlet `Start-AzStorageAccountMigration`
    - Added parameter `-Force`
+
 
 
 
