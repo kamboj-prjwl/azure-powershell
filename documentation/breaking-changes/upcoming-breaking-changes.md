@@ -1290,6 +1290,8 @@ Preview modules are not included in this list. Read more about [module version t
   - Change description : PlanName and MemberName will be removed from the InputObject parameter. 
   - This change will take effect on '11/18/2025'- The change is expected to take effect from Az version : '15.0.0'
   - The change is expected to take effect from version : '3.0.0'
+
+- Cmdlet breaking-change will happen to parameter set `GetAzDevCenterAdminImageVersion_List`
   The cmdlet parameter set is being deprecated. There will be no replacement for it.
   - Change description : The default parameter set will change from list dev center image versions to list project image versions. 
   - This change will take effect on '11/18/2025'- The change is expected to take effect from Az version : '15.0.0'
@@ -2876,18 +2878,12 @@ Preview modules are not included in this list. Read more about [module version t
   - Change description : The type of the property DataError will be changed from fixed array to 'List'. 
   - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
   - The change is expected to take effect from version : '7.0.0'
+  The cmdlet parameter set is being deprecated. There will be no replacement for it.
+  - Change description : The parameter set 'Analysis' and 'AnalysisViaIdentity' will be removed. 
+  - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
+  - The change is expected to take effect from version : '7.0.0'
 
 - Cmdlet breaking-change will happen to parameter set `InvokeAzNginxAnalysisConfiguration_Analysis`
-  The cmdlet parameter set is being deprecated. There will be no replacement for it.
-  - Change description : The parameter set 'Analysis' and 'AnalysisViaIdentity' will be removed. 
-  - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
-  - The change is expected to take effect from version : '7.0.0'
-
-- Cmdlet breaking-change will happen to parameter set `InvokeAzNginxAnalysisConfiguration_AnalysisViaIdentity`
-  The cmdlet parameter set is being deprecated. There will be no replacement for it.
-  - Change description : The parameter set 'Analysis' and 'AnalysisViaIdentity' will be removed. 
-  - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
-  - The change is expected to take effect from version : '7.0.0'
 
 ### `New-AzNginxConfiguration`
 
@@ -3338,14 +3334,6 @@ Preview modules are not included in this list. Read more about [module version t
   - Change description : The type of the property UploadLimitScheduleWeeklyRecurrence will be changed from fixed array to 'List'. 
   - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
   - The change is expected to take effect from version : '2.0.0'
-
-- Cmdlet breaking-change will happen to parameter set `UpdateAzStorageMoverAgent_Update`
-  The cmdlet parameter set is being deprecated. There will be no replacement for it.
-  - Change description : The parameter set Update and UpdateViaIdentity will be removed. Suggest to use UpdateExpanded, UpdateViaIdentityExpanded and UpdateViaJsonString instead. 
-  - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
-  - The change is expected to take effect from version : '2.0.0'
-
-- Cmdlet breaking-change will happen to parameter set `UpdateAzStorageMoverAgent_UpdateViaIdentity`
   The cmdlet parameter set is being deprecated. There will be no replacement for it.
   - Change description : The parameter set Update and UpdateViaIdentity will be removed. Suggest to use UpdateExpanded, UpdateViaIdentityExpanded and UpdateViaJsonString instead. 
   - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
