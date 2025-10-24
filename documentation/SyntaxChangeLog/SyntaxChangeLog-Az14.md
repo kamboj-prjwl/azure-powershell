@@ -1,3 +1,19 @@
+## 14.6.0 - November 2025
+#### Az.Compute 10.5.0 
+* Modified cmdlet `New-AzVM`
+   - Added parameter `-AddProxyAgentExtension`
+* Modified cmdlet `New-AzVmss`
+   - Added parameter `-AddProxyAgentExtension`
+* Modified cmdlet `Set-AzVMProxyAgentSetting`
+   - Added parameter `-AddProxyAgentExtension`
+* Modified cmdlet `Set-AzVmssProxyAgentSetting`
+   - Added parameter `-AddProxyAgentExtension`
+* Modified cmdlet `Update-AzHost`
+   - Added parameter `-Redeploy`
+#### Az.SignalR 2.3.0 
+* Added cmdlet `Add-AzSignalRNetworkIpRule`, `Get-AzSignalRReplica`, `New-AzSignalRNetworkIpRuleObject`, `New-AzSignalRReplica`, `Remove-AzSignalRNetworkIpRule`, `Remove-AzSignalRReplica`, `Restart-AzSignalRReplica`, `Start-AzSignalRReplica`, `Stop-AzSignalRReplica`, `Update-AzSignalRReplica`#### Az.Storage 9.3.0 
+, `Get-AzStorageNetworkSecurityPerimeterConfiguration`, `Invoke-AzStorageReconcileNetworkSecurityPerimeterConfiguration`
+
 ## 14.5.0 - October 2025
 #### Az.Compute 10.4.0 
 * Modified cmdlet `Grant-AzSnapshotAccess`
@@ -734,6 +750,7 @@
 #### Az.Storage 9.0.0 
 * Modified cmdlet `Start-AzStorageAccountMigration`
    - Added parameter `-Force`
+
 
 
 

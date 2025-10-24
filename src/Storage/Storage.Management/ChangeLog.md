@@ -18,6 +18,8 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
+
+## Version 9.3.0
 * Supported get and reconcile NSP Configuration on a Storage account: 
     - `Get-AzStorageNetworkSecurityPerimeterConfiguration`
     - `Invoke-AzStorageReconcileNetworkSecurityPerimeterConfiguration`
