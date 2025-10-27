@@ -1,3 +1,81 @@
+## 14.6.0 - November 2025
+#### Az.Compute 10.5.0
+* Added '-Redeploy' switch parameter for 'Update-AzHost' cmdlet to enable dedicated host redeployment.
+* ComputeRP related cmdlets will now use 2025-04-01 version of the ComputeRP API.
+* Added '-AddProxyAgentExtension' parameter (Switch) to 'New-AzVmss' and 'New-AzVM'
+* Added '-AddProxyAgentExtension' parameter (Bool) to 'Set-AzVMProxyAgentSetting' and  'Set-AzVmssProxyAgentSetting'
+
+#### Az.DeviceRegistry 1.0.0
+* General availability for module Az.DeviceRegistry
+* GA stable release of API version 2025-10-01 for Az.DeviceRegistry. New updates include:
+    - Schema and Schema Version asynchronous delete. No longer synchronous.
+    - Namespace Asset and Namespace Discovered Asset EventGroups.
+    - Namespace Device x509 certificate authentication now supports intermediate certificates and key secret names.
+
+#### Az.Migrate 2.10.1
+* Fixed bugs in 'Initialize-AzMigrateLocalReplicationInfrastructure'
+  - Correct AMH solution tool name of 'ServerMigration_DataReplication' is now being passed in to address replication count missing and UX experience load issues in Azure Migrate on Azure portal.
+* Address Join-Path compatibility issue in older version of PowerShell environment such as PowerShell 5.1 in the following commands
+ - 'Initialize-AzMigrateLocalReplicationInfrastructure'
+ - 'Initialize-AzMigrateReplicationInfrastructure'
+ - 'New-AzMigrateLocalServerReplication'
+ - 'Get-AzMigrateLocalServerReplication'
+ - 'Set-AzMigrateLocalServerReplication'
+ - 'Start-AzMigrateLocalServerMigration'
+
+#### Az.Network 7.22.0
+* Added new RouteTableUsageMode property for Network Manager Routing Configuration
+  - Updated 'New-AzNetworkManagerRoutingConfiguration' cmdlet
+  - Updated 'Set-AzNetworkManagerRoutingConfiguration' cmdlet
+* Added certificate-based authentication support for VPN Gateway connections
+    - New cmdlet 'New-AzVirtualNetworkGatewayCertificateAuthentication' to create certificate authentication configuration
+    - Added '-AuthenticationType' and '-CertificateAuthentication' parameters to 'New-AzVirtualNetworkGatewayConnection' and 'Set-AzVirtualNetworkGatewayConnection'
+    - Added '-UserAssignedIdentityId' parameter to 'Set-AzVirtualNetworkGateway' and 'New-AzVirtualNetworkGateway' for managed identity configuration
+* Upgraded the api version from 2024-10-01 to 2025-01-01
+* Added property 'EnableL4ClientIpPreservation' to Application Gateway Backend Settings, as well as support for them in the following cmdlets:
+    - 'New-AzApplicationGatewayBackendSetting'
+    - 'Add-AzApplicationGatewayBackendSetting'
+    - 'Set-AzApplicationGatewayBackendSetting'
+* Added property 'EnableProbeProxyProtocolHeader' to Application Gateway Probes, as well as support for them in the following cmdlets:
+    - 'Set-AzApplicationGatewayProbeConfig'
+	- 'Add-AzApplicationGatewayProbeConfig'
+	- 'New-AzApplicationGatewayProbeConfig'
+
+#### Az.RecoveryServices 7.9.1
+* Added Cross region restore support for new region - northeastus5.
+
+#### Az.Search 0.11.0
+* Added support for 2025-05-01 RP API 
+* Added support for ACC compute type option
+* Added support for data exfiltration protection option
+* Added support for network bypass option
+* Added support for NSP configuration GET LIST commands
+
+#### Az.SignalR 2.3.0
+* Added cmdlets for managing replicas:
+    - Get-AzSignalRReplica: get replica(s) for SignalR
+    - New-AzSignalRReplica: create a new replica for SignalR
+    - Remove-AzSignalRReplica: remove a replica from SignalR
+    - Restart-AzSignalRReplica: restart a SignalR replica
+    - Start-AzSignalRReplica: start a SignalR replica
+    - Stop-AzSignalRReplica: stop a SignalR replica
+    - Update-AzSignalRReplica: update a SignalR replica
+* Added cmdlets for managing network IP rules
+    - New-AzSignalRNetworkIpRuleObject: create a new network IP rule object for SignalR
+    - Add-AzSignalRNetworkIpRule: add network IP rule(s) to SignalR
+    - Remove-AzSignalRNetworkIpRule: remove network IP rule(s) from SignalR
+
+#### Az.Site 0.1.0
+* First preview release for module Az.Site
+
+#### Az.StackHCI 2.6.4
+* Fixed bug: Buse boolean in comparision
+
+#### Az.Storage 9.3.0
+* Supported get and reconcile NSP Configuration on a Storage account: 
+    - 'Get-AzStorageNetworkSecurityPerimeterConfiguration'
+    - 'Invoke-AzStorageReconcileNetworkSecurityPerimeterConfiguration'
+
 ## 14.5.0 - October 2025
 #### Az.Automation 1.11.2
 * Fixed runbook_type: 'PowerShell72' [#24779][#23967]
