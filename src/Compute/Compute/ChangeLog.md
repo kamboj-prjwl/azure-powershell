@@ -20,6 +20,8 @@
 
 -->
 ## Upcoming Release
+
+## Version 10.5.0
 * Added `-Redeploy` switch parameter for `Update-AzHost` cmdlet to enable dedicated host redeployment.
 * ComputeRP related cmdlets will now use 2025-04-01 version of the ComputeRP API.
 * Added `-AddProxyAgentExtension` parameter (Switch) to `New-AzVmss` and `New-AzVM`
