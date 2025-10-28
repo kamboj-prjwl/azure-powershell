@@ -20,6 +20,8 @@
 
 ## Upcoming Release
 
+## Version 7.23.0
+
 * Bug fix for `AzureFirewallPolicy` to ensure `BasePolicy` is properly set via `Set-AzFirewallPolicy` cmdlet either via pipe or direct value.
 
 ## Version 7.22.0
