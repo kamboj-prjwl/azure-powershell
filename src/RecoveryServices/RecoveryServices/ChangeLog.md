@@ -19,6 +19,8 @@
 -->
 
 ## Upcoming Release
+
+## Version 7.9.1
 * Added Cross region restore support for new region - northeastus5.
 
 ## Version 7.9.0
