@@ -20,6 +20,8 @@
 
 -->
 ## Upcoming Release
+
+## Version 10.5.0
 * Updated Azure.Core from 1.45.0 to 1.47.3
 * Added `-Redeploy` switch parameter for `Update-AzHost` cmdlet to enable dedicated host redeployment.
 * Added `-SupportedSecurityOption` parameter to `New-AzDiskConfig` cmdlet.
