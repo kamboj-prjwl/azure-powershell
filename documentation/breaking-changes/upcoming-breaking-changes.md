@@ -250,55 +250,6 @@ Preview modules are not included in this list. Read more about [module version t
   - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
   - The change is expected to take effect from version : '9.0.0'
 
-## Az.ArcResourceBridge
-
-### `Get-AzArcResourceBridgeApplianceCredential`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.ArcResourceBridge.Models.Api20221027.IApplianceListCredentialResults' is changing
-  - The following properties in the output type are being deprecated : 'Kubeconfig' 'SupportedVersion'
-  - The following properties are being added to the output type : 'Kubeconfig' 'SupportedVersion'
-  - Change description : The types of the properties 'Kubeconfig' and 'SupportedVersion' will be changed from single object to 'List'. 
-  - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
-  - The change is expected to take effect from version : '9.0.0'
-
-### `Get-AzArcResourceBridgeCredential`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.ArcResourceBridge.Models.Api20221027.IApplianceListKeysResults' is changing
-  - The following properties in the output type are being deprecated : 'Kubeconfig' 'SupportedVersion'
-  - The following properties are being added to the output type : 'Kubeconfig' 'SupportedVersion'
-  - Change description : The types of the properties 'Kubeconfig' and 'SupportedVersion' will be changed from single object to 'List'. 
-  - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
-  - The change is expected to take effect from version : '9.0.0'
-
-### `Get-AzArcResourceBridgeTelemetryConfig`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  The cmdlet parameter set is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
-  - The change is expected to take effect from version : '9.0.0'
-
-### `Get-AzArcResourceBridgeUpgradeGraph`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.ArcResourceBridge.Models.Api20221027.IUpgradeGraph' is changing
-  - The following properties in the output type are being deprecated : 'Kubeconfig' 'SupportedVersion'
-  - The following properties are being added to the output type : 'Kubeconfig' 'SupportedVersion'
-  - Change description : The types of the properties 'Kubeconfig' and 'SupportedVersion' will be changed from single object to 'List'. 
-  - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
-  - The change is expected to take effect from version : '9.0.0'
-
-### `New-AzArcResourceBridge`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.ArcResourceBridge.Models.Api20221027.IAppliance' is changing
-  - The following properties in the output type are being deprecated : 'IdentityType'
-  - The following properties are being added to the output type : 'EnableSystemAssignedIdentity'
-  - Change description : IdentityType will be removed. EnableSystemAssignedIdentity will be used to enable/disable system assigned identity. 
-  - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
-  - The change is expected to take effect from version : '9.0.0'
-
 ## Az.Attestation
 
 ### `Get-AzAttestationDefaultProvider`
@@ -377,38 +328,6 @@ Preview modules are not included in this list. Read more about [module version t
   - The following properties in the output type are being deprecated : 'PrivateEndpointConnection' 'Value'
   - The following properties are being added to the output type : 'PrivateEndpointConnection' 'Value'
   - Change description : The types of the properties 'PrivateEndpointConnection' and 'Value' will be changed from single object to 'List'. 
-  - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
-  - The change is expected to take effect from version : '9.0.0'
-
-## Az.Automanage
-
-### `Get-AzAutomanageHciReport`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.Automanage.Models.Api20220504.IReport' is changing
-  - The following properties in the output type are being deprecated : 'AdditionalInfo' 'Detail' 'Resource'
-  - The following properties are being added to the output type : 'AdditionalInfo' 'Detail' 'Resource'
-  - Change description : The types of the properties 'AdditionalInfo', 'Detail' and 'Resource' will be changed from single object to 'List'. 
-  - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
-  - The change is expected to take effect from version : '9.0.0'
-
-### `Get-AzAutomanageHcrpReport`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.Automanage.Models.Api20220504.IReport' is changing
-  - The following properties in the output type are being deprecated : 'AdditionalInfo' 'Detail' 'Resource'
-  - The following properties are being added to the output type : 'AdditionalInfo' 'Detail' 'Resource'
-  - Change description : The types of the properties 'AdditionalInfo', 'Detail' and 'Resource' will be changed from single object to 'List'. 
-  - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
-  - The change is expected to take effect from version : '9.0.0'
-
-### `Get-AzAutomanageReport`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.Automanage.Models.Api20220504.IReport' is changing
-  - The following properties in the output type are being deprecated : 'AdditionalInfo' 'Detail' 'Resource'
-  - The following properties are being added to the output type : 'AdditionalInfo' 'Detail' 'Resource'
-  - Change description : The types of the properties 'AdditionalInfo', 'Detail' and 'Resource' will be changed from single object to 'List'. 
   - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
   - The change is expected to take effect from version : '9.0.0'
 
@@ -2226,7 +2145,7 @@ Preview modules are not included in this list. Read more about [module version t
   - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
   - The change is expected to take effect from version : '7.0.0'
 
-- Parameter breaking-change will happen to all parameter sets
+- Parameter breaking-change will happen to parameter set `NewAzAutoscaleSetting_CreateExpanded`
   - `-Profile`
     - The parameter : 'Profile' is changing.
     The type of the parameter is changing from 'Array' to 'List'.
@@ -3070,24 +2989,6 @@ Preview modules are not included in this list. Read more about [module version t
   The cmdlet parameter set is being deprecated. There will be no replacement for it.
   - This change will take effect on '11/19/2025'- The change is expected to take effect from Az version : '15.0.0'
   - The change is expected to take effect from version : '4.0.0'
-
-## Az.ServiceFabric
-
-### `Set-AzServiceFabricManagedNodeType`
-
-- Parameter breaking-change will happen to all parameter sets
-  - `-ForceReimage`
-    - Parameter is being deprecated without being replaced, use Invoke-AzServiceFabricReimageManagedNodeType cmdlet instead.
-    - This change is expected to take effect from Az.ServiceFabric version: 5.0.0 and Az version: 15.0.0
-  - `-NodeName`
-    - Parameter is being deprecated without being replaced, use Invoke-AzServiceFabricReimageManagedNodeType cmdlet instead.
-    - This change is expected to take effect from Az.ServiceFabric version: 5.0.0 and Az version: 15.0.0
-  - `-PassThru`
-    - Parameter is being deprecated without being replaced, use Invoke-AzServiceFabricReimageManagedNodeType cmdlet instead.
-    - This change is expected to take effect from Az.ServiceFabric version: 5.0.0 and Az version: 15.0.0
-  - `-Reimage`
-    - Parameter is being deprecated without being replaced, use Invoke-AzServiceFabricReimageManagedNodeType cmdlet instead.
-    - This change is expected to take effect from Az.ServiceFabric version: 5.0.0 and Az version: 15.0.0
 
 ## Az.StackHCI
 

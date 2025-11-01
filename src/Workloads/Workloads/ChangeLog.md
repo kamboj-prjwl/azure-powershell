@@ -18,6 +18,8 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
+
+## Version 1.1.0
 * Introduced various new features by upgrading code generator. Please see details [here](https://github.com/Azure/azure-powershell/blob/main/documentation/Autorest-powershell-v4-new-features.md).
 * The parameters of the `New-AzWorkloadsMonitor`, `New-AzWorkloadsProviderInstance` and `Update-AzWorkloadsMonitor` cmdlet will be changed by new Managed Identity settings.
     - Removed `-IdentityType` and `-IdentityUserAssignedIdentity` parameters.
