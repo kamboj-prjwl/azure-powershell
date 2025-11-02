@@ -1,3 +1,125 @@
+## 14.6.0 - November 2025
+#### Az.ArcResourceBridge 1.2.0 
+* Modified cmdlet `Get-AzArcResourceBridgeTelemetryConfig`
+   - Removed parameter `-InputObject`
+   - Output type changed from ``String`` to ``IApplianceGetTelemetryConfigResult``
+* Modified cmdlet `Get-AzArcResourceBridgeUpgradeGraph`
+   - Added parameter `-ApplianceInputObject`
+* Modified cmdlet `New-AzArcResourceBridge`
+   - Removed parameter `-IdentityType`
+   - Added parameters `-EnableSystemAssignedIdentity`, `-JsonFilePath`, `-JsonString`
+   - Changed the type of parameter `-Distro` from `Distro` to `String`
+   - Changed the type of parameter `-InfrastructureConfigProvider` from `Provider` to `String`
+* Modified cmdlet `Update-AzArcResourceBridge`
+   - Added parameters `-JsonFilePath`, `-JsonString`
+#### Az.Automanage 1.2.0 
+* Modified cmdlet `Get-AzAutomanageConfigProfileAssignment`
+   - Added parameter `-ConfigurationProfileAssignmentInputObject`
+* Modified cmdlet `Get-AzAutomanageConfigProfileHciAssignment`
+   - Added parameter `-ClusterInputObject`
+* Modified cmdlet `Get-AzAutomanageConfigProfileHcrpAssignment`
+   - Added parameter `-MachineInputObject`
+* Modified cmdlet `Get-AzAutomanageHciReport`
+   - Added parameters `-ClusterInputObject`, `-ConfigurationProfileAssignmentInputObject`
+* Modified cmdlet `Get-AzAutomanageHcrpReport`
+   - Added parameters `-ConfigurationProfileAssignmentInputObject`, `-MachineInputObject`
+* Modified cmdlet `Get-AzAutomanageReport`
+   - Added parameters `-ConfigurationProfileAssignmentInputObject`, `-ReportInputObject`
+* Modified cmdlet `New-AzAutomanageConfigProfile`
+   - Added parameters `-JsonFilePath`, `-JsonString`
+* Modified cmdlet `New-AzAutomanageConfigProfileAssignment`
+   - Added parameters `-ConfigurationProfileAssignmentInputObject`, `-JsonFilePath`, `-JsonString`
+* Modified cmdlet `New-AzAutomanageConfigProfileHciAssignment`
+   - Added parameters `-ClusterInputObject`, `-JsonFilePath`, `-JsonString`
+* Modified cmdlet `New-AzAutomanageConfigProfileHcrpAssignment`
+   - Added parameters `-MachineInputObject`, `-JsonFilePath`, `-JsonString`
+* Modified cmdlet `Remove-AzAutomanageConfigProfileAssignment`
+   - Added parameter `-ConfigurationProfileAssignmentInputObject`
+* Modified cmdlet `Remove-AzAutomanageConfigProfileHciAssignment`
+   - Added parameter `-ClusterInputObject`
+* Modified cmdlet `Remove-AzAutomanageConfigProfileHcrpAssignment`
+   - Added parameter `-MachineInputObject`
+* Modified cmdlet `Update-AzAutomanageConfigProfile`
+   - Added parameters `-JsonFilePath`, `-JsonString`
+* Added cmdlet `Update-AzAutomanageConfigProfileAssignment`, `Update-AzAutomanageConfigProfileHciAssignment`, `Update-AzAutomanageConfigProfileHcrpAssignment`
+#### Az.Compute 10.5.0 
+* Modified cmdlet `New-AzDiskConfig`
+   - Added parameter `-SupportedSecurityOption`
+* Modified cmdlet `New-AzDiskUpdateConfig`
+   - Added parameter `-SupportedSecurityOption`
+* Modified cmdlet `New-AzVM`
+   - Added parameter `-AddProxyAgentExtension`
+* Modified cmdlet `New-AzVmss`
+   - Added parameter `-AddProxyAgentExtension`
+* Modified cmdlet `Set-AzVMProxyAgentSetting`
+   - Added parameter `-AddProxyAgentExtension`
+* Modified cmdlet `Set-AzVmssProxyAgentSetting`
+   - Added parameter `-AddProxyAgentExtension`
+* Modified cmdlet `Update-AzHost`
+   - Added parameter `-Redeploy`
+#### Az.ElasticSan 1.5.0 
+* Modified cmdlet `New-AzElasticSan`
+   - Added parameters `-AutoScalePolicyEnforcement`, `-CapacityUnitScaleUpLimitTiB`, `-IncreaseCapacityUnitByTiB`, `-UnusedSizeTiB`
+* Modified cmdlet `Update-AzElasticSan`
+   - Added parameters `-AutoScalePolicyEnforcement`, `-CapacityUnitScaleUpLimitTiB`, `-IncreaseCapacityUnitByTiB`, `-UnusedSizeTiB`
+* Added cmdlet `Test-AzElasticSanVolumeBackup`, `Test-AzElasticSanVolumeRestore`
+#### Az.RedisEnterpriseCache 1.6.0 
+* Modified cmdlet `New-AzRedisEnterpriseCache`
+   - Added parameter `-PublicNetworkAccess`
+* Modified cmdlet `Update-AzRedisEnterpriseCache`
+   - Added parameter `-PublicNetworkAccess`
+#### Az.ServiceFabric 3.9.0 
+* Modified cmdlet `Set-AzServiceFabricManagedNodeType`
+   - Removed parameters `-NodeName`, `-Reimage`, `-ForceReimage`, `-PassThru`
+#### Az.SignalR 2.3.0 
+* Added cmdlet `Add-AzSignalRNetworkIpRule`, `Get-AzSignalRReplica`, `New-AzSignalRNetworkIpRuleObject`, `New-AzSignalRReplica`, `Remove-AzSignalRNetworkIpRule`, `Remove-AzSignalRReplica`, `Restart-AzSignalRReplica`, `Start-AzSignalRReplica`, `Stop-AzSignalRReplica`, `Update-AzSignalRReplica`
+#### Az.Sql 6.3.0 
+* Modified cmdlet `Set-AzSqlDatabaseBackupLongTermRetentionPolicy`
+   - Added parameters `-TimeBasedImmutability`, `-TimeBasedImmutabilityMode`
+* Added cmdlet `Lock-AzSqlDatabaseLongTermRetentionBackupImmutability`, `Remove-AzSqlDatabaseLongTermRetentionBackupImmutability`, `Remove-AzSqlDatabaseLongTermRetentionBackupLegalHold`, `Set-AzSqlDatabaseLongTermRetentionBackupLegalHold`
+#### Az.Storage 9.3.0 
+* Modified cmdlet `New-AzStorageAccount`
+   - Added parameter `-EnableBlobGeoPriorityReplication`
+* Modified cmdlet `Set-AzStorageAccount`
+   - Added parameter `-EnableBlobGeoPriorityReplication`
+* Modified cmdlet `Set-AzStorageObjectReplicationPolicy`
+   - Added parameter `-EnablePriorityReplication`
+* Added cmdlet `Get-AzStorageNetworkSecurityPerimeterConfiguration`, `Invoke-AzStorageReconcileNetworkSecurityPerimeterConfiguration`
+#### Az.Workloads 1.1.0 
+* Modified cmdlet `Get-AzWorkloadsProviderInstance`
+   - Added parameter `-MonitorInputObject`
+* Modified cmdlet `New-AzWorkloadsMonitor`
+   - Removed parameter `-IdentityType`
+   - Added parameters `-EnableSystemAssignedIdentity`, `-JsonFilePath`, `-JsonString`
+   - Changed the type of parameter `-RoutingPreference` from `RoutingPreference` to `String`
+   - Changed the type of parameter `-UserAssignedIdentity` from `Hashtable` to `String[]`
+* Modified cmdlet `New-AzWorkloadsProviderDB2InstanceObject`
+   - Changed the type of parameter `-SslPreference` from `SslPreference` to `String`
+* Modified cmdlet `New-AzWorkloadsProviderHanaDbInstanceObject`
+   - Changed the type of parameter `-SslPreference` from `SslPreference` to `String`
+* Modified cmdlet `New-AzWorkloadsProviderInstance`
+   - Removed parameters `-IdentityType`, `-IdentityUserAssignedIdentity`
+   - Added parameters `-MonitorInputObject`, `-EnableSystemAssignedIdentity`, `-UserAssignedIdentity`, `-JsonFilePath`, `-JsonString`
+* Modified cmdlet `New-AzWorkloadsProviderPrometheusHaClusterInstanceObject`
+   - Changed the type of parameter `-SslPreference` from `SslPreference` to `String`
+* Modified cmdlet `New-AzWorkloadsProviderPrometheusOSInstanceObject`
+   - Changed the type of parameter `-SslPreference` from `SslPreference` to `String`
+* Modified cmdlet `New-AzWorkloadsProviderSapNetWeaverInstanceObject`
+   - Changed the type of parameter `-SslPreference` from `SslPreference` to `String`
+* Modified cmdlet `New-AzWorkloadsProviderSqlServerInstanceObject`
+   - Changed the type of parameter `-SslPreference` from `SslPreference` to `String`
+* Modified cmdlet `New-AzWorkloadsSapLandscapeMonitor`
+   - Added parameters `-JsonFilePath`, `-JsonString`
+* Modified cmdlet `Remove-AzWorkloadsProviderInstance`
+   - Added parameter `-MonitorInputObject`
+* Modified cmdlet `Update-AzWorkloadsMonitor`
+   - Removed parameter `-IdentityType`
+   - Added parameters `-AppLocation`, `-EnableSystemAssignedIdentity`, `-LogAnalyticsWorkspaceArmId`, `-ManagedResourceGroupName`, `-MonitorSubnet`, `-RoutingPreference`, `-ZoneRedundancyPreference`, `-AsJob`, `-NoWait`
+   - Changed the type of parameter `-UserAssignedIdentity` from `Hashtable` to `String[]`
+* Modified cmdlet `Update-AzWorkloadsSapLandscapeMonitor`
+   - Added parameters `-JsonFilePath`, `-JsonString`
+* Added cmdlet `Update-AzWorkloadsProviderInstance`
+
 ## 14.5.0 - October 2025
 #### Az.Compute 10.4.0 
 * Modified cmdlet `Grant-AzSnapshotAccess`
@@ -734,6 +856,7 @@
 #### Az.Storage 9.0.0 
 * Modified cmdlet `Start-AzStorageAccountMigration`
    - Added parameter `-Force`
+
 
 
 
